@@ -32,5 +32,7 @@ public class Persona {
 
         System.out.println(p1.get_nome()); // pedrito
         System.out.println(p2.edad);       // 24
+        MembroComunidadeEscolar m1 = new MembroComunidadeEscolar("Alan",21,1,"Hugo");
+        System.out.println(m1.nome);
     }
 }
