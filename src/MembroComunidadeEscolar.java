@@ -7,4 +7,10 @@ public class MembroComunidadeEscolar extends Persona{
         this.codigoCentro = codCentro;
         this.nomeCentro = nomCentro;
     }
+    public int getCodigoCentro(){
+        return this.codigoCentro;
+    }
+    public void setCodigoCentro(int novoCodCentro) {
+        if (novoCodCentro>0) codigoCentro = novoCodCentro;
+    }
 }
