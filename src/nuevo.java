@@ -33,6 +33,12 @@ public class nuevo {
             for (int i = 5; i < 20; i+=3) {
                 System.out.println("INDICE:"+i);
             }
+            int i = 5;
+            for (;;){
+                System.out.println(+i);
+                i+=1;
+                if (i>19) break;
+            }
         }
         teclado.close();
     }
