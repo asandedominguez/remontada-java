@@ -13,4 +13,7 @@ public class Horas {
         this.minutos = minutos;
         this.segundos = segundos;
     }
+    public String toString() {
+        return String.format("%02d:%02d:%02d",horas,minutos,segundos);
+    }
 }
