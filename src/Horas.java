@@ -3,17 +3,51 @@ public class Horas {
     public int minutos;
     public int segundos;
 
-    public Horas(){
-        horas = 24;
-        minutos = 60;
-        segundos = 60;
+    public Horas(int hh, int mm, int ss) {
+        this.horas = hh;
+        this.minutos = mm;
+        this.segundos = ss;
     }
-    public Horas(int horas, int minutos, int segundos){
+
+    public Horas(double tiempo) {
+        int parteEntera = (int) tiempo;
+        this.horas = parteEntera;
+
+        double min = (tiempo - parteEntera) * 60;
+        this.minutos = (int) min;
+
+        double seg = (min - this.minutos) * 60;
+        this.segundos = (int) seg;
+    }
+
+    public int get_horas() {
+        return this.horas;
+    }
+
+    public void set_horas(int horas) {
         this.horas = horas;
+    }
+
+    public int get_minutos() {
+        return this.minutos;
+    }
+
+    public void set_minutos(int minutos) {
         this.minutos = minutos;
+    }
+
+    public int get_segundos() {
+        return this.segundos;
+    }
+
+    public void set_segundos(int segundos) {
         this.segundos = segundos;
     }
-    public String toString() {
-        return String.format("%02d:%02d:%02d",horas,minutos,segundos);
+
+    public static void main(String[] args) {
+        Horas toti = new Horas(1.78);
+        System.out.println(toti.get_horas());
+        System.out.println(toti.get_minutos());
+        System.out.println(toti.get_segundos());
     }
 }
