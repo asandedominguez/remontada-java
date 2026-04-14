@@ -13,4 +13,6 @@ public class MembroComunidadeEscolar extends Persona{
     public void setCodigoCentro(int novoCodCentro) {
         if (novoCodCentro>0) codigoCentro = novoCodCentro;
     }
+    public String get_nombreCentro(){ return this.nomeCentro;}
+
 }

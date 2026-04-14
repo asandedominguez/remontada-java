@@ -11,8 +11,11 @@ public class Alumno extends MembroComunidadeEscolar {
         this.curso = curso;
     }
     public static void main(String[] args) {
-        Alumno p1 = new Alumno();
-        System.out.println();
-
+        Alumno p1 = new Alumno("DAM", "Alan", 20,"Castelao",1234);
+        System.out.println(p1.get_curso());
+        System.out.println(p1.get_nome());
+        System.out.println(p1.get_edad());
+        System.out.println(p1.get_nombreCentro());
+        System.out.println(p1.getCodigoCentro());
     }
 }

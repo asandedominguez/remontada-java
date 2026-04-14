@@ -14,7 +14,9 @@ public class Persona {
         this.nome = nome;
         this.edad = edad;
     }
-
+    public int get_edad() {
+        return this.edad;
+    }
     // Getter y Setter
     public String get_nome() {
         return this.nome;
