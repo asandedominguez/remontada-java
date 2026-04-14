@@ -3,6 +3,12 @@ public class Horas {
     public int minutos;
     public int segundos;
 
+    public Horas() {
+        this.horas = 0;
+        this.minutos = 0;
+        this.segundos = 0;
+    }
+
     // Constructor principal con validación
     public Horas(int hora, int minutos, int segundos) {
         if (hora >= 0 && hora < 24) {
@@ -95,7 +101,7 @@ public class Horas {
     }
 
     public static void main(String[] args) {
-        Horas toti = new Horas(1.78);
+        Horas toti = new Horas();
         System.out.println(toti.get_horas());
         System.out.println(toti.get_minutos());
         System.out.println(toti.get_segundos());
