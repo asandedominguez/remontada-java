@@ -46,17 +46,34 @@ public class Horas {
 
         normalizar();
     }
-
     // Constructor desde String "hh:mm:ss"
     public Horas(String momento) {
-        String[] partes = momento.split(":");
+        if (momento.length() != 8) {
+            System.out.println("lonxitude");
+            this.horas = 0;
+            this.minutos = 0;
+            this.segundos = 0;
 
-        this.horas = Integer.parseInt(partes[0]);
-        this.minutos = Integer.parseInt(partes[1]);
-        this.segundos = Integer.parseInt(partes[2]);
+        } else if (momento.charAt(2) == ':' && momento.charAt(5) == ':') {
 
-        normalizar();
+            String[] partes = momento.split(":");
+            int hora = Integer.parseInt(partes[0]);
+            int mins = Integer.parseInt(partes[1]);
+            int seg = Integer.parseInt(partes[2]);
+
+            this.horas = hora;
+            this.minutos = mins;
+            this.segundos = seg;
+
+            normalizar();
+        }
     }
+    public void cero(){
+        this.horas = 0;
+        this.minutos = 0;
+        this.segundos = 0;
+    }
+
 
     // Normaliza por si hay overflow (ej: 70 min -> 1h 10m)
     private void normalizar() {
@@ -99,6 +116,7 @@ public class Horas {
         this.segundos = segundos;
         normalizar();
     }
+
 
     public static void main(String[] args) {
         Horas toti = new Horas();
