@@ -1,7 +1,7 @@
 public class Alumno extends MembroComunidadeEscolar {
     public String curso;
-    public Alumno(String curso, String nom, int ed, String nomCentro, int codCentro) {
-        super(nom, ed, codCentro, nomCentro);
+    public Alumno(String curso, String nom, int ed, String nomCentro, int codCentro, String dn) {
+        super(nom, ed, codCentro, nomCentro, dn);
         this.curso = curso;
     }
     public String get_curso() {
@@ -11,7 +11,7 @@ public class Alumno extends MembroComunidadeEscolar {
         this.curso = curso;
     }
     public static void main(String[] args) {
-        Alumno p1 = new Alumno("DAM", "Alan", 20,"Castelao",1234);
+        Alumno p1 = new Alumno("DAM", "Alan", 20,"Castelao",1234, "26623664D");
         System.out.println(p1.get_curso());
         System.out.println(p1.get_nome());
         System.out.println(p1.get_edad());
