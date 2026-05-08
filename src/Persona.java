@@ -3,7 +3,7 @@ public class Persona {
     public String nome;
     public int edad;
     public String dni;
-    // Constructor por defecto
+    // Constructor por deafecto
     public Persona() {
         nome = "toti";
         edad = 23;
